@@ -13,6 +13,7 @@ module NES_driver(input logic D, CLK, reset, en,
 	
 	Counter #(4) count(.clk(CLK),
 							 .reset(reset | SRL),
+							 .en(en),
 							 .d(cc),
 							 .q(cc));
 								
