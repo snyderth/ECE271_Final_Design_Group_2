@@ -1,0 +1,8 @@
+vsim work.NES_driver
+add wave -binary *
+
+force CLK 0 @ 0, 1 @ 5 -r 10
+force DATA 0 @ 0, 1 @ 6, 0 @ 7, 1 @ 8, 0 @ 9, 0 @ 10, 1 @ 11, 0 @ 12
+
+
+run 100
