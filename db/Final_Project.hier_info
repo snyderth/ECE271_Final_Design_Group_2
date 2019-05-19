@@ -4,18 +4,18 @@
 |Final_Project|NES_driver:inst
 D => D.IN1
 CLK => CLK.IN2
-reset => reset.IN1
-en => en.IN1
+reset => reset.IN2
+en => en.IN3
 SRCLK <= CLK.DB_MAX_OUTPUT_PORT_TYPE
-SRL <= Comparator:c.gt
-Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Q[4] <= Q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Q[5] <= Q[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Q[6] <= Q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Q[7] <= Q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+SRL <= SRL.DB_MAX_OUTPUT_PORT_TYPE
+Q[0] <= register:regist.Q
+Q[1] <= register:regist.Q
+Q[2] <= register:regist.Q
+Q[3] <= register:regist.Q
+Q[4] <= register:regist.Q
+Q[5] <= register:regist.Q
+Q[6] <= register:regist.Q
+Q[7] <= register:regist.Q
 
 
 |Final_Project|NES_driver:inst|shift_register:shift
@@ -124,5 +124,48 @@ lt <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
 lte <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
 gt <= LessThan2.DB_MAX_OUTPUT_PORT_TYPE
 gte <= LessThan3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Final_Project|NES_driver:inst|register:regist
+D[0] => Q[0]~reg0.DATAIN
+D[1] => Q[1]~reg0.DATAIN
+D[2] => Q[2]~reg0.DATAIN
+D[3] => Q[3]~reg0.DATAIN
+D[4] => Q[4]~reg0.DATAIN
+D[5] => Q[5]~reg0.DATAIN
+D[6] => Q[6]~reg0.DATAIN
+D[7] => Q[7]~reg0.DATAIN
+CLK => Q[0]~reg0.CLK
+CLK => Q[1]~reg0.CLK
+CLK => Q[2]~reg0.CLK
+CLK => Q[3]~reg0.CLK
+CLK => Q[4]~reg0.CLK
+CLK => Q[5]~reg0.CLK
+CLK => Q[6]~reg0.CLK
+CLK => Q[7]~reg0.CLK
+reset => Q[0]~reg0.ACLR
+reset => Q[1]~reg0.ACLR
+reset => Q[2]~reg0.ACLR
+reset => Q[3]~reg0.ACLR
+reset => Q[4]~reg0.ACLR
+reset => Q[5]~reg0.ACLR
+reset => Q[6]~reg0.ACLR
+reset => Q[7]~reg0.ACLR
+en => Q[7]~reg0.ENA
+en => Q[6]~reg0.ENA
+en => Q[5]~reg0.ENA
+en => Q[4]~reg0.ENA
+en => Q[3]~reg0.ENA
+en => Q[2]~reg0.ENA
+en => Q[1]~reg0.ENA
+en => Q[0]~reg0.ENA
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= Q[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= Q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= Q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 

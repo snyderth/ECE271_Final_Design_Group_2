@@ -20,12 +20,22 @@ module NES_driver(input logic D, CLK, reset, en,
 	Comparator #(4) c(.a(cc),
 						.b(4'd7),
 						.gt(SRL));
+						
+	register #(8) regist(.D(n1),
+								.CLK(SRL),
+								.reset(reset),
+								.en(en),
+								.Q(Q));
 	
 	assign SRCLK = CLK;
 	
+	
+	
+	/*
 	always_ff@(posedge SRL, posedge reset) 
 	begin
 		if(reset) Q <= 1;
 		else if(en)	Q <= n1;
-	end					
+	end	
+		*/
 endmodule

@@ -1,5 +1,5 @@
 Flow report for Final_Project
-Sat May 18 18:43:44 2019
+Sun May 19 15:04:22 2019
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -40,7 +40,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Sat May 18 18:43:44 2019       ;
+; Flow Status                        ; Successful - Sun May 19 15:04:22 2019       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; Final_Project                               ;
 ; Top-level Entity Name              ; Final_Project                               ;
@@ -66,7 +66,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/18/2019 18:43:22 ;
+; Start date & time ; 05/19/2019 15:03:55 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Final_Project       ;
 +-------------------+---------------------+
@@ -77,7 +77,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 44748150141592.155823020131668         ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 174508026252197.155830343410516        ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
@@ -94,8 +94,8 @@ refer to the applicable agreement for further details.
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:00:23     ; 1.0                     ; 1174 MB             ; 00:00:55                           ;
-; Total                  ; 00:00:23     ; --                      ; --                  ; 00:00:55                           ;
+; Analysis & Elaboration ; 00:00:28     ; 1.0                     ; 4723 MB             ; 00:00:25                           ;
+; Total                  ; 00:00:28     ; --                      ; --                  ; 00:00:25                           ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -104,7 +104,7 @@ refer to the applicable agreement for further details.
 +------------------------+------------------+------------+------------+----------------+
 ; Module Name            ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +------------------------+------------------+------------+------------+----------------+
-; Analysis & Elaboration ; OkGoogle         ; Arch Linux ; Arch Linux ; x86_64         ;
+; Analysis & Elaboration ; DESKTOP-7FO5KVK  ; Windows 10 ; 10.0       ; x86_64         ;
 +------------------------+------------------+------------+------------+----------------+
 
 
