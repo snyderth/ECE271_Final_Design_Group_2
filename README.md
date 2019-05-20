@@ -3,4 +3,4 @@ Members:
 Kyle Nobel
 Rogers Dong
 Thomas Snyder
-
+Alvin Deng
