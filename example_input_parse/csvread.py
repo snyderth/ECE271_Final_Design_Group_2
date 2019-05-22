@@ -4,9 +4,9 @@ prev_clk_high = True
 
 values = []
 
-logic_values = []
+logic_values = ""
 
-with open('g.txt') as csv_file:
+with open('a.txt') as csv_file:
     reader = csv.reader(csv_file, delimiter=',')
     line = 0
     for row in reader:
@@ -22,8 +22,8 @@ with open('g.txt') as csv_file:
             line += 1
 for value in values:
     if value < 2:
-        logic_values.append(0)
+        logic_values += '0'
     else:
-        logic_values.append(1)
-
+        logic_values += '1'
 print logic_values
+
