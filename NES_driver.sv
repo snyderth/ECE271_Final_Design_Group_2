@@ -4,6 +4,7 @@ module NES_driver(input logic D, CLK, reset, en,
 	
 	logic [7:0] n1;
 	logic [3:0] cc;
+	logic internal_latch;
 	
 	shift_register #(8) shift(.D(D),
 								.CLK(CLK),
@@ -19,13 +20,19 @@ module NES_driver(input logic D, CLK, reset, en,
 								
 	Comparator #(4) c(.a(cc),
 						.b(4'd7),
-						.gt(SRL));
+						.gt(internal_latch));
 						
 	register #(8) regist(.D(n1),
 								.CLK(SRL),
 								.reset(reset),
 								.en(en),
 								.Q(Q));
+								
+	Synchronizer sync(.D(internal_latch),
+							.CLK(CLK),
+							.reset(reset),
+							.en(en),
+							.Q(SRL));
 	
 	assign SRCLK = CLK;
 	
