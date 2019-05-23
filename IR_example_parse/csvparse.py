@@ -56,6 +56,6 @@ if os.path.exists('IR_parsed.txt'):
     os.remove('IR_parsed.txt')
 with open('IR_parsed.txt', "w") as out:
     for num in range(10):
-        out.write(str(num) + " button: " + parse_csv(num) + '\n')
+        out.write(str(num) + " data: " + parse_csv(num) + '\n\n')
 
 print "Wrote to 'IR_parsed.txt.'\n"
