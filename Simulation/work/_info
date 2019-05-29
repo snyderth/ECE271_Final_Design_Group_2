@@ -10,7 +10,7 @@ cModel Technology
 dZ:/home/thomas/ECE272/LAB5/simulation
 vComparator
 Z0 DXx6 sv_std 3 std 0 22 WmjPaeP=7F5?QFXzJ>D[Q2
-Z1 !s110 1558230238
+Z1 !s110 1559159752
 !i10b 1
 !s100 R@ZP8Hg3[8o9[ma@0okUo2
 I96ZakEm?=miK>4^K1LN8Y2
@@ -26,7 +26,7 @@ Z4 OP;L;10.4a;61
 r1
 !s85 0
 31
-Z5 !s108 1558230237.000000
+Z5 !s108 1559159752.000000
 !s107 Z:/home/thomas/ECE271_Final_Design_Project/Comparator.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|Z:/home/thomas/ECE271_Final_Design_Project/Comparator.sv|
 !s101 -O0
@@ -51,7 +51,7 @@ R4
 r1
 !s85 0
 31
-!s108 1558230238.000000
+R5
 !s107 Z:/home/thomas/ECE271_Final_Design_Project/Counter.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|Z:/home/thomas/ECE271_Final_Design_Project/Counter.sv|
 !s101 -O0
@@ -60,15 +60,15 @@ R6
 n@counter
 vFinal_Project
 R0
-!s110 1558230236
+Z7 !s110 1559159751
 !i10b 1
-!s100 gKC;jm@nXQd1G30@I_XAU3
-I5TQ>HoCY_7T]<2EcF<[2_1
+!s100 0VbHXonmz=z8LRShRo^;g3
+IN3TYU]7F1m7Q1YRoTR<YA0
 R2
 !s105 Final_Project_sv_unit
 S1
 R3
-w1558224717
+w1559158961
 8Z:/home/thomas/ECE271_Final_Design_Project/Final_Project.sv
 FZ:/home/thomas/ECE271_Final_Design_Project/Final_Project.sv
 L0 1
@@ -76,24 +76,49 @@ R4
 r1
 !s85 0
 31
-!s108 1558230236.000000
+Z8 !s108 1559159751.000000
 !s107 Z:/home/thomas/ECE271_Final_Design_Project/Final_Project.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|Z:/home/thomas/ECE271_Final_Design_Project/Final_Project.sv|
 !s101 -O0
 !i113 1
 R6
 n@final_@project
+vNES_Controller
+R0
+Z9 !s110 1559159753
+!i10b 1
+!s100 =a;d?]XXIHR9`d`=:<dFb0
+IN=8acf^Wn96XBzN2[<^CY3
+R2
+!s105 NES_Controller_sv_unit
+S1
+R3
+w1559154883
+8Z:/home/thomas/ECE271_Final_Design_Project/NES_Controller.sv
+FZ:/home/thomas/ECE271_Final_Design_Project/NES_Controller.sv
+L0 1
+R4
+r1
+!s85 0
+31
+Z10 !s108 1559159753.000000
+!s107 Z:/home/thomas/ECE271_Final_Design_Project/NES_Controller.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|Z:/home/thomas/ECE271_Final_Design_Project/NES_Controller.sv|
+!s101 -O0
+!i113 1
+R6
+n@n@e@s_@controller
 vNES_driver
 R0
-Z7 !s110 1558230237
+R7
 !i10b 1
-!s100 36I>k6e@2=0e]<oBMbf1K3
-IaN_[_XCF>NHSU;@RH>d2;2
+!s100 VeXh0<Hlh=@I[=92RJ:za3
+I6RDa?d@z=jdOb=<2zhlEh2
 R2
 !s105 NES_driver_sv_unit
 S1
 R3
-w1558230196
+w1559155639
 8Z:/home/thomas/ECE271_Final_Design_Project/NES_driver.sv
 FZ:/home/thomas/ECE271_Final_Design_Project/NES_driver.sv
 L0 1
@@ -101,24 +126,73 @@ R4
 r1
 !s85 0
 31
-R5
+R8
 !s107 Z:/home/thomas/ECE271_Final_Design_Project/NES_driver.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|Z:/home/thomas/ECE271_Final_Design_Project/NES_driver.sv|
 !s101 -O0
 !i113 1
 R6
 n@n@e@s_driver
+vPS2_Controller
+R0
+R9
+!i10b 1
+!s100 [d@X2aB28^[:L<9c>8J?f3
+I[AYH_DE<_T3UZ9Nz3_fKP3
+R2
+!s105 PS2_Controller_sv_unit
+S1
+R3
+w1559152766
+8Z:/home/thomas/ECE271_Final_Design_Project/PS2_Controller.sv
+FZ:/home/thomas/ECE271_Final_Design_Project/PS2_Controller.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R10
+!s107 Z:/home/thomas/ECE271_Final_Design_Project/PS2_Controller.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|Z:/home/thomas/ECE271_Final_Design_Project/PS2_Controller.sv|
+!s101 -O0
+!i113 1
+R6
+n@p@s2_@controller
+vregister
+R0
+Z11 !s110 1559159754
+!i10b 1
+!s100 fMLnEl6lQT7Qn[MJ`OkBQ3
+I]]=ikS=@Cb:mnHonFYh[W3
+R2
+!s105 register_sv_unit
+S1
+R3
+w1558396718
+8Z:/home/thomas/ECE271_Final_Design_Project/register.sv
+FZ:/home/thomas/ECE271_Final_Design_Project/register.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R10
+!s107 Z:/home/thomas/ECE271_Final_Design_Project/register.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|Z:/home/thomas/ECE271_Final_Design_Project/register.sv|
+!s101 -O0
+!i113 1
+R6
 vshift_register
 R0
-R7
+R1
 !i10b 1
-!s100 dK7odR0_fUbo<7F_9XXXn1
-Io`M3Qe5POC9MCGhe]eVCR1
+!s100 a2<CHP9oS<AEDTTXmgB^P1
+I4i4TT;h[ABjGiGC4e[JYd1
 R2
 !s105 shift_register_sv_unit
 S1
 R3
-w1558228678
+w1559159732
 8Z:/home/thomas/ECE271_Final_Design_Project/shift_register.sv
 FZ:/home/thomas/ECE271_Final_Design_Project/shift_register.sv
 L0 1
@@ -126,9 +200,34 @@ R4
 r1
 !s85 0
 31
-R5
+R8
 !s107 Z:/home/thomas/ECE271_Final_Design_Project/shift_register.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|Z:/home/thomas/ECE271_Final_Design_Project/shift_register.sv|
 !s101 -O0
 !i113 1
 R6
+vSynchronizer
+R0
+R11
+!i10b 1
+!s100 ROA1nzcP9C[E2MKS_?H?S1
+IzfXb8_^6IXfj?SJgBOfL<0
+R2
+!s105 Synchronizer_sv_unit
+S1
+R3
+w1558397119
+8Z:/home/thomas/ECE271_Final_Design_Project/Synchronizer.sv
+FZ:/home/thomas/ECE271_Final_Design_Project/Synchronizer.sv
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1559159754.000000
+!s107 Z:/home/thomas/ECE271_Final_Design_Project/Synchronizer.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|Z:/home/thomas/ECE271_Final_Design_Project/Synchronizer.sv|
+!s101 -O0
+!i113 1
+R6
+n@synchronizer

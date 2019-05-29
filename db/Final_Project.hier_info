@@ -1,4 +1,23 @@
 |Final_Project
+clk => clk.IN1
+A => A.IN1
+B => B.IN1
+STRT => STRT.IN1
+SEL => SEL.IN1
+UP => UP.IN1
+DN => DN.IN1
+L => L.IN1
+R => R.IN1
+reset => reset.IN2
+en => en.IN2
+NESout[0] << NES_driver:inst.A
+NESout[1] << NES_driver:inst.B
+NESout[2] << NES_driver:inst.SEL
+NESout[3] << NES_driver:inst.STRT
+NESout[4] << NES_driver:inst.UP
+NESout[5] << NES_driver:inst.DN
+NESout[6] << NES_driver:inst.L
+NESout[7] << NES_driver:inst.R
 
 
 |Final_Project|NES_driver:inst
@@ -8,14 +27,14 @@ reset => reset.IN3
 en => en.IN4
 SRCLK <= CLK.DB_MAX_OUTPUT_PORT_TYPE
 SRL <= SRL.DB_MAX_OUTPUT_PORT_TYPE
-Q[0] <= register:regist.Q
-Q[1] <= register:regist.Q
-Q[2] <= register:regist.Q
-Q[3] <= register:regist.Q
-Q[4] <= register:regist.Q
-Q[5] <= register:regist.Q
-Q[6] <= register:regist.Q
-Q[7] <= register:regist.Q
+A <= register:regist.Q
+B <= register:regist.Q
+SEL <= register:regist.Q
+STRT <= register:regist.Q
+UP <= register:regist.Q
+DN <= register:regist.Q
+L <= register:regist.Q
+R <= register:regist.Q
 
 
 |Final_Project|NES_driver:inst|shift_register:shift
@@ -27,15 +46,8 @@ CLK => Q[4]~reg0.CLK
 CLK => Q[5]~reg0.CLK
 CLK => Q[6]~reg0.CLK
 CLK => Q[7]~reg0.CLK
-D => Q[7]~reg0.DATAIN
-en => Q[7]~reg0.ENA
-en => Q[6]~reg0.ENA
-en => Q[5]~reg0.ENA
-en => Q[4]~reg0.ENA
-en => Q[3]~reg0.ENA
-en => Q[2]~reg0.ENA
-en => Q[1]~reg0.ENA
-en => Q[0]~reg0.ENA
+D => Q.DATAA
+en => ~NO_FANOUT~
 reset => Q[0]~reg0.ACLR
 reset => Q[1]~reg0.ACLR
 reset => Q[2]~reg0.ACLR
@@ -44,6 +56,23 @@ reset => Q[4]~reg0.ACLR
 reset => Q[5]~reg0.ACLR
 reset => Q[6]~reg0.ACLR
 reset => Q[7]~reg0.ACLR
+load => Q.OUTPUTSELECT
+load => Q.OUTPUTSELECT
+load => Q.OUTPUTSELECT
+load => Q.OUTPUTSELECT
+load => Q.OUTPUTSELECT
+load => Q.OUTPUTSELECT
+load => Q.OUTPUTSELECT
+load => Q.OUTPUTSELECT
+par[0] => Q.DATAB
+par[1] => Q.DATAB
+par[2] => Q.DATAB
+par[3] => Q.DATAB
+par[4] => Q.DATAB
+par[5] => Q.DATAB
+par[6] => Q.DATAB
+par[7] => Q.DATAB
+sout <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -178,5 +207,67 @@ en => Q~reg0.ENA
 reset => Q~reg0.ACLR
 reset => n1.ENA
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Final_Project|NES_Controller:inst2
+srlatch => srlatch.IN1
+clk => clk.IN1
+A => data[0].IN1
+B => data[1].IN1
+STRT => data[3].IN1
+SEL => data[2].IN1
+UP => data[4].IN1
+DN => data[5].IN1
+L => data[6].IN1
+R => data[7].IN1
+reset => reset.IN1
+en => en.IN1
+q <= shift_register:shifter.sout
+
+
+|Final_Project|NES_Controller:inst2|shift_register:shifter
+CLK => Q[0]~reg0.CLK
+CLK => Q[1]~reg0.CLK
+CLK => Q[2]~reg0.CLK
+CLK => Q[3]~reg0.CLK
+CLK => Q[4]~reg0.CLK
+CLK => Q[5]~reg0.CLK
+CLK => Q[6]~reg0.CLK
+CLK => Q[7]~reg0.CLK
+D => Q.DATAA
+en => ~NO_FANOUT~
+reset => Q[0]~reg0.ACLR
+reset => Q[1]~reg0.ACLR
+reset => Q[2]~reg0.ACLR
+reset => Q[3]~reg0.ACLR
+reset => Q[4]~reg0.ACLR
+reset => Q[5]~reg0.ACLR
+reset => Q[6]~reg0.ACLR
+reset => Q[7]~reg0.ACLR
+load => Q.OUTPUTSELECT
+load => Q.OUTPUTSELECT
+load => Q.OUTPUTSELECT
+load => Q.OUTPUTSELECT
+load => Q.OUTPUTSELECT
+load => Q.OUTPUTSELECT
+load => Q.OUTPUTSELECT
+load => Q.OUTPUTSELECT
+par[0] => Q.DATAB
+par[1] => Q.DATAB
+par[2] => Q.DATAB
+par[3] => Q.DATAB
+par[4] => Q.DATAB
+par[5] => Q.DATAB
+par[6] => Q.DATAB
+par[7] => Q.DATAB
+sout <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= Q[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= Q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= Q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
