@@ -1,7 +1,27 @@
 module NES_driver(input logic D, CLK, reset, en,
 						output logic SRCLK, SRL,
 						output logic [7:0] Q);
+	/*Output:
+				Bit# | Button   
+				--------------
+				  0  |   A  
+				--------------
+				  1  |   B  
+				--------------
+				  2  | Select   
+				--------------
+				  3  | Start  
+				--------------
+				  4  |   Up  
+				--------------
+				  5  |  Down  
+				--------------
+				  6  |  Left   
+				--------------
+				  7  | Right   
+				--------------
 	
+	*/
 	logic [7:0] n1;
 	logic [3:0] cc;
 	logic internal_latch;
