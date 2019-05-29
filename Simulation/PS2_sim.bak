@@ -1,0 +1,6 @@
+vsim PS2_Controller 
+	add wave -binary *
+	force D 0@0
+	force reset 0@0
+	force en 1@0
+	force clk 0@0, 1@10, -r 100 
