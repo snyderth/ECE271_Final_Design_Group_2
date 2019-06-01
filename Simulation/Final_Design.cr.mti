@@ -1,9 +1,30 @@
-Z:/home/thomas/ECE271_Final_Design_Project/NES_driver.sv {1 {vlog -work work -sv -stats=none Z:/home/thomas/ECE271_Final_Design_Project/NES_driver.sv
+Z:/home/thomas/ECE271_Final_Design_Project/NES_Controller.sv {1 {vlog -work work -sv -stats=none Z:/home/thomas/ECE271_Final_Design_Project/NES_Controller.sv
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module NES_Controller
+
+Top level modules:
+	NES_Controller
+
+} {} {}} Z:/home/thomas/ECE271_Final_Design_Project/register.sv {1 {vlog -work work -sv -stats=none Z:/home/thomas/ECE271_Final_Design_Project/register.sv
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module register
+
+Top level modules:
+	register
+
+} {} {}} Z:/home/thomas/ECE271_Final_Design_Project/NES_driver.sv {1 {vlog -work work -sv -stats=none Z:/home/thomas/ECE271_Final_Design_Project/NES_driver.sv
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
 -- Compiling module NES_driver
 
 Top level modules:
 	NES_driver
+
+} {} {}} Z:/home/thomas/ECE271_Final_Design_Project/Synchronizer.sv {1 {vlog -work work -sv -stats=none Z:/home/thomas/ECE271_Final_Design_Project/Synchronizer.sv
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module Synchronizer
+
+Top level modules:
+	Synchronizer
 
 } {} {}} Z:/home/thomas/ECE271_Final_Design_Project/shift_register.sv {1 {vlog -work work -sv -stats=none Z:/home/thomas/ECE271_Final_Design_Project/shift_register.sv
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
@@ -12,12 +33,12 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 Top level modules:
 	shift_register
 
-} {} {}} Z:/home/thomas/ECE271_Final_Design_Project/Counter.sv {1 {vlog -work work -sv -stats=none Z:/home/thomas/ECE271_Final_Design_Project/Counter.sv
+} {} {}} Z:/home/thomas/ECE271_Final_Design_Project/Count_Block.sv {1 {vlog -work work -sv -stats=none Z:/home/thomas/ECE271_Final_Design_Project/Count_Block.sv
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
--- Compiling module Counter
+-- Compiling module Count_Block
 
 Top level modules:
-	Counter
+	Count_Block
 
 } {} {}} Z:/home/thomas/ECE271_Final_Design_Project/Comparator.sv {1 {vlog -work work -sv -stats=none Z:/home/thomas/ECE271_Final_Design_Project/Comparator.sv
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
@@ -26,11 +47,32 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 Top level modules:
 	Comparator
 
+} {} {}} Z:/home/thomas/ECE271_Final_Design_Project/Counter.sv {1 {vlog -work work -sv -stats=none Z:/home/thomas/ECE271_Final_Design_Project/Counter.sv
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module Counter
+
+Top level modules:
+	Counter
+
 } {} {}} Z:/home/thomas/ECE271_Final_Design_Project/Final_Project.sv {1 {vlog -work work -sv -stats=none Z:/home/thomas/ECE271_Final_Design_Project/Final_Project.sv
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
 -- Compiling module Final_Project
 
 Top level modules:
 	Final_Project
+
+} {} {}} Z:/home/thomas/ECE271_Final_Design_Project/PS2_Controller.sv {1 {vlog -work work -sv -stats=none Z:/home/thomas/ECE271_Final_Design_Project/PS2_Controller.sv
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module PS2_Controller
+
+Top level modules:
+	PS2_Controller
+
+} {} {}} Z:/home/thomas/ECE271_Final_Design_Project/PS2_test.sv {1 {vlog -work work -sv -stats=none Z:/home/thomas/ECE271_Final_Design_Project/PS2_test.sv
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module PS2_test
+
+Top level modules:
+	PS2_test
 
 } {} {}}
