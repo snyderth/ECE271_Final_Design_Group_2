@@ -60,15 +60,15 @@ R6
 n@count_@block
 vCounter
 R0
-Z9 !s110 1559233420
+Z9 !s110 1559356588
 !i10b 1
-!s100 [j]kmFPn=liPUjZ5UVgQ53
-IZe0nMe>FGa2KiTeIE7mCe0
+!s100 >:5@hCVT74b<Yhc^?iMCz0
+I9eR@<]aI3PQA]lF]oad=g1
 R2
 !s105 Counter_sv_unit
 S1
 R3
-w1558054005
+w1559356531
 8Z:/home/thomas/ECE271_Final_Design_Project/Counter.sv
 FZ:/home/thomas/ECE271_Final_Design_Project/Counter.sv
 L0 1
@@ -76,24 +76,48 @@ R4
 r1
 !s85 0
 31
-Z10 !s108 1559233420.000000
+Z10 !s108 1559356588.000000
 !s107 Z:/home/thomas/ECE271_Final_Design_Project/Counter.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|Z:/home/thomas/ECE271_Final_Design_Project/Counter.sv|
 !s101 -O0
 !i113 1
 R6
 n@counter
+vcounter_test
+R0
+!s110 1559355903
+!i10b 1
+!s100 8Q@feOC729bk7W8=6d3LT2
+IbbFZ9loQJGSm@ca=medgZ2
+R2
+!s105 counter_test_sv_unit
+S1
+R3
+w1559355684
+8Z:/home/thomas/ECE271_Final_Design_Project/counter_test.sv
+FZ:/home/thomas/ECE271_Final_Design_Project/counter_test.sv
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1559355903.000000
+!s107 Z:/home/thomas/ECE271_Final_Design_Project/counter_test.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|Z:/home/thomas/ECE271_Final_Design_Project/counter_test.sv|
+!s101 -O0
+!i113 1
+R6
 vFinal_Project
 R0
-!s110 1559233418
+R9
 !i10b 1
-!s100 `[?iBoFLYcB<O8njSm<7f1
-IE8lDAhIAaD@G?AGa96fZI1
+!s100 @;zNfhSU81Kjc6WiI_M091
+IbzkjMfOLG^Rf:1eEmE=`Y1
 R2
 !s105 Final_Project_sv_unit
 S1
 R3
-w1559232810
+w1559356143
 8Z:/home/thomas/ECE271_Final_Design_Project/Final_Project.sv
 FZ:/home/thomas/ECE271_Final_Design_Project/Final_Project.sv
 L0 1
@@ -101,7 +125,7 @@ R4
 r1
 !s85 0
 31
-!s108 1559233418.000000
+R10
 !s107 Z:/home/thomas/ECE271_Final_Design_Project/Final_Project.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|Z:/home/thomas/ECE271_Final_Design_Project/Final_Project.sv|
 !s101 -O0
@@ -110,7 +134,7 @@ R6
 n@final_@project
 vNES_Controller
 R0
-R9
+!s110 1559233420
 !i10b 1
 !s100 =a;d?]XXIHR9`d`=:<dFb0
 IN=8acf^Wn96XBzN2[<^CY3
@@ -126,7 +150,7 @@ R4
 r1
 !s85 0
 31
-R10
+!s108 1559233420.000000
 !s107 Z:/home/thomas/ECE271_Final_Design_Project/NES_Controller.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|Z:/home/thomas/ECE271_Final_Design_Project/NES_Controller.sv|
 !s101 -O0
