@@ -1,10 +1,11 @@
-module Final_Project(input logic	clk, a, b, strt, sel, up,dn, l, r, reset, en,
+module Final_Project(input logic	clk, a, b, strt, sel, up,dn, l, r, reset, en, CLK_50M,
 							output logic [7:0] NESout);
 
 						
 //		logic srl, sdata, NES_clk;
 //		
 //		NES_driver inst(.CLK(clk),
+//							 .CLK_50M(CLK_50M)
 //							 .reset(reset),
 //							 .en(en),
 //							 .SRL(srl),
