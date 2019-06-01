@@ -1,4 +1,4 @@
-module NES_driver(input logic D, CLK, reset, en,
+module NES_driver(input logic D, CLK, reset, en, CLK_50M,
 						output logic SRCLK, SRL,
 						output logic [7:0] Q);
 	
@@ -29,7 +29,7 @@ module NES_driver(input logic D, CLK, reset, en,
 								.Q(Q));
 								
 	Synchronizer sync(.D(internal_latch),
-							.CLK(CLK),
+							.CLK(CLK_50M),
 							.reset(reset),
 							.en(en),
 							.Q(SRL));
