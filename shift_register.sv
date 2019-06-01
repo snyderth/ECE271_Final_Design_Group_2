@@ -12,7 +12,6 @@ module shift_register#(parameter N=8)
 		if(reset) Q <= 0;
 		//else if(en & load)//parallel load, serial out
 		else if(load & en) Q <= par;
-		 
 		//if(en)//parallel out, serial load
 		else if(en) Q <= {D, Q[N-1:1]};
 		
