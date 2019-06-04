@@ -1,0 +1,9 @@
+module PS2_test(input 	logic [8:0] test_data,
+					 output	logic letter);
+					 
+				shift_register #(9) data_sender();
+				
+				PS2_controller ps2();
+					 
+					 
+endmodule

@@ -1,0 +1,7 @@
+module Count_Block #(parameter N=8, compNum=11)
+						  (input logic	clk, en, reset,
+							output logic 	q);
+	Counter	#(N)		
+				
+				
+endmodule

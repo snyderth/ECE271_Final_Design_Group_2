@@ -5,7 +5,7 @@ module Counter#(parameter width=6)
 			
 	always_ff@(posedge clk, posedge reset)
 		begin
-			if(reset) q <= 0;
-			else if (en)	q <= d + 1;
+			if(reset) 		q <= 0;
+			else if (en) 	q <= q + 1;
 		end
 endmodule
