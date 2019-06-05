@@ -33,7 +33,8 @@ module NES_Controller(input logic	srlatch, clk, A, B, STRT, SEL, UP,DN, L, R, re
 									.sout(q),
 									.reset(reset),
 									.par(data),
-									.en(en));
+									.en(en),
+									.D(1'b0));
 
 
 

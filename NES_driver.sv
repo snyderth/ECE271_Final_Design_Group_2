@@ -1,6 +1,6 @@
 module NES_driver(input logic D, CLK, reset, en, CLK_50M,
-						output logic SRCLK, SRL,
-						output logic A,B,SEL,STRT,UP,DN,L,R);
+		  output logic SRCLK, SRL,
+		  output logic A,B,SEL,STRT,UP,DN,L,R);
 	/*Output:
 				Bit# | Button   
 				--------------
@@ -38,34 +38,34 @@ module NES_driver(input logic D, CLK, reset, en, CLK_50M,
 	assign R = Q[7];
 	
 	shift_register #(8) shift(.D(D),
-								.CLK(CLK),
-								.reset(reset),
-								.en(en),
-								.Q(n1),
-								.load(0),
-								.par(0));
+				.CLK(CLK),
+				.reset(reset),
+				.en(en),
+				.Q(n1),
+				.load(0),
+				.par(0));
 	
 	Counter #(4) count(.clk(CLK),
-							 .reset(reset | SRL),
-							 .en(en),
-							 .d(cc),
-							 .q(cc));
+			.reset(reset | SRL),
+			 .en(en),
+			 .d(cc),
+			 .q(cc));
 								
 	Comparator #(4) c(.a(cc),
-						.b(4'd7),
-						.gt(internal_latch));
+			.b(4'd7),
+			.gt(internal_latch));
 						
 	register #(8) regist(.D(n1),
-								.CLK(SRL),
-								.reset(reset),
-								.en(en),
-								.Q(Q));
+			.CLK(SRL),
+			.reset(reset),
+			.en(en),
+			.Q(Q));
 								
 	Synchronizer sync(.D(internal_latch),
-							.CLK(CLK_50M),
-							.reset(reset),
-							.en(en),
-							.Q(SRL));
+			.CLK(CLK_50M),
+			.reset(reset),
+			.en(en),
+			.Q(SRL));
 	
 	assign SRCLK = CLK;
 	
