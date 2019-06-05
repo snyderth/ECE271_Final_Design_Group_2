@@ -87,14 +87,9 @@ module PS2FSM (input logic clk, key_clock, reset, data,
 								else				nextstate <= waitstart;
 			endcase
 		//output logic
-
-		
-		assign parity_error1 = ^key1; //xor all together, if parity error = 1, there is an issue
+		assign parity_error1 = ^key1;
 		assign parity_error2 = ^key2;
-		assign code1 = {key1[1],key1[2],key1[3],key1[4],key1[5],key1[6],key1[7],key1[8]};
-		assign code2 = {key2[1],key2[2],key2[3],key2[4],key2[5],key2[6],key2[7],key2[8]};		
-//These should be shifted one more over
-//		assign code1 = {key1[2],key1[3],key1[4],key1[5],key1[6],key1[7],key1[8],key1[9]};
-//		assign code2 = {key2[2],key2[3],key2[4],key2[5],key2[6],key2[7],key2[8],key2[9]};
+		assign code1 = {key1[2],key1[3],key1[4],key1[5],key1[6],key1[7],key1[8],key1[9]};
+		assign code2 = {key2[2],key2[3],key2[4],key2[5],key2[6],key2[7],key2[8],key2[9]};
 		
 endmodule
