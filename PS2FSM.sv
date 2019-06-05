@@ -1,6 +1,8 @@
 module PS2FSM (input logic clk, key_clock, reset, data,
-					output logic [10:0] key1, key2);
+					output logic parity_error1, parity_error2,
+					output logic [7:0] code1, code2);
 		
+		logic [10:0] key1, key2;
 		logic [10:0] shift;
 		logic [3:0] counter;
 		
@@ -24,7 +26,7 @@ module PS2FSM (input logic clk, key_clock, reset, data,
 								end
 								else begin
 									nextstate <= read1;
-									shift <= {data, shift[10:1]};
+									shift <= {shift[9:0], data};
 									counter <= counter + 1;
 								end
 								
@@ -43,7 +45,7 @@ module PS2FSM (input logic clk, key_clock, reset, data,
 				waitread1:	if (key_clock)
 									nextstate <= waitread1;
 								else begin
-									shift <= {data, shift[10:1]};
+									shift <= {shift[9:0], data};
 									counter <= counter + 1;
 									nextstate <= read1;
 								end
@@ -70,7 +72,7 @@ module PS2FSM (input logic clk, key_clock, reset, data,
 									nextstate <= waitread2;
 								else begin
 									nextstate <= read2;
-									shift <= {data, shift[10:1]};
+									shift <= {shift[9:0], data};
 									counter <= counter + 1;
 								end
 								
@@ -83,6 +85,10 @@ module PS2FSM (input logic clk, key_clock, reset, data,
 				waitstart:	if (key_clock)	nextstate <= start;
 								else				nextstate <= waitstart;
 			endcase
-		
+		//output logic
+		assign parity_error1 = ^key1;
+		assign parity_error2 = ^key2;
+		assign code1 = {key1[2],key1[3],key1[4],key1[5],key1[6],key1[7],key1[8],key1[9]};
+		assign code2 = {key2[2],key2[3],key2[4],key2[5],key2[6],key2[7],key2[8],key2[9]};
 		
 endmodule
