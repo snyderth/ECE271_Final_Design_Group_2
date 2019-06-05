@@ -12,13 +12,13 @@ force reset 1 @ 0, 0 @ 10
 force key_clock 1 @ 0
 
 
-# The A key make code: 00011100001
+# The A key make code: 00011100001 (1C when reversed and start/end/parity bits omitted)
 force key_clock 0 @ 100, 1 @ 120, 0 @ 140, 1 @ 160, 0 @ 180, 1 @ 200, 0 @ 220, 1 @ 240, 0 @ 260, 1 @ 280, 0 @ 300, 1 @ 320
 force key_clock 0 @ 340, 1 @ 360, 0 @ 380, 1 @ 400, 0 @ 420, 1 @ 440, 0 @ 460, 1 @ 480, 0 @ 500, 1 @ 520
 force data 0 @ 0, 1 @ 210, 0 @ 330, 1 @ 490, 0 @ 530
 
 
-# The F key break code: 00000111111 01101010011
+# The F key break code: 00000111111 01101010011 (F0, 2B)
 force key_clock 0 @ 1000, 1 @ 1020, 0 @ 1040, 1 @ 1060, 0 @ 1080, 1 @ 1100, 0 @ 1120, 1 @ 1140, 0 @ 1160, 1 @ 1180, 0 @ 1200
 force key_clock 1 @ 1220, 0 @ 1240, 1 @ 1260, 0 @ 1280, 1 @ 1300, 0 @ 1320, 1 @ 1340, 0 @ 1360, 1 @ 1380, 0 @ 1400, 1 @ 1420
 force data 1 @ 1190, 0 @ 1430

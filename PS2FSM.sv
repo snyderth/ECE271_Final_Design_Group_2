@@ -57,6 +57,7 @@ module PS2FSM (input logic clk, key_clock, reset, data,
 										nextstate <= read2;
 									else
 										nextstate <= waitstart;
+										key2 <= 0;
 								end
 								
 				// Similar to read1 but for case when key1 is a '0F' indicating that the code
