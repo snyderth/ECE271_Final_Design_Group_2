@@ -51,5 +51,7 @@ module Final_Project(input logic	clk, a, b, strt, sel, up,dn, l, r, reset, en, C
 									.clk(NES_clk));
 
 //PS2_Controller ps2();
-counter_test ct();
+//counter_test ct();
+
+	PS2FSM inst3();
 endmodule
