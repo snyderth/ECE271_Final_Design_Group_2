@@ -47,6 +47,13 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 Top level modules:
 	counter_test
 
+} {} {}} Z:/home/thomas/ECE271_Final_Design_Project/Final_Project.sv {1 {vlog -work work -sv -stats=none Z:/home/thomas/ECE271_Final_Design_Project/Final_Project.sv
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module Final_Project
+
+Top level modules:
+	Final_Project
+
 } {} {}} Z:/home/thomas/ECE271_Final_Design_Project/Comparator.sv {1 {vlog -work work -sv -stats=none Z:/home/thomas/ECE271_Final_Design_Project/Comparator.sv
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
 -- Compiling module Comparator
@@ -54,12 +61,12 @@ Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 
 Top level modules:
 	Comparator
 
-} {} {}} Z:/home/thomas/ECE271_Final_Design_Project/NES_driver.sv {1 {vlog -work work -sv -stats=none Z:/home/thomas/ECE271_Final_Design_Project/NES_driver.sv
+} {} {}} Z:/home/thomas/ECE271_Final_Design_Project/Counter.sv {1 {vlog -work work -sv -stats=none Z:/home/thomas/ECE271_Final_Design_Project/Counter.sv
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
--- Compiling module NES_driver
+-- Compiling module Counter
 
 Top level modules:
-	NES_driver
+	Counter
 
 } {} {}} Z:/home/thomas/ECE271_Final_Design_Project/Count_Block.sv {1 {vlog -work work -sv -stats=none Z:/home/thomas/ECE271_Final_Design_Project/Count_Block.sv
 Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
