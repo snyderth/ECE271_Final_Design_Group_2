@@ -109,15 +109,15 @@ r1
 R6
 vFinal_Project
 R0
-!s110 1559693256
+!s110 1559784769
 !i10b 1
-!s100 lg76jMkiDPlTl371aBmk<3
-Iz;iAbh3bYYCf^`N^;PPjK3
+!s100 D^7MFfI[ATf1_USSQLF<N0
+ITOGEg9;InY<_b8AX`KX100
 R2
 !s105 Final_Project_sv_unit
 S1
 R3
-w1559692360
+w1559784265
 8Z:/home/thomas/ECE271_Final_Design_Project/Final_Project.sv
 FZ:/home/thomas/ECE271_Final_Design_Project/Final_Project.sv
 L0 1
@@ -125,7 +125,7 @@ R4
 r1
 !s85 0
 31
-!s108 1559693256.000000
+!s108 1559784769.000000
 !s107 Z:/home/thomas/ECE271_Final_Design_Project/Final_Project.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|Z:/home/thomas/ECE271_Final_Design_Project/Final_Project.sv|
 !s101 -O0
@@ -207,6 +207,31 @@ Z13 !s108 1559693259.000000
 !i113 1
 R6
 n@p@s2_@controller
+vPS2_decoder
+R0
+!s110 1559786228
+!i10b 1
+!s100 ^>eMn0oW81:cHLa]HhGY_3
+I70ZZAYLB37azF^PO[mRFX0
+R2
+!s105 PS2_decoder_sv_unit
+S1
+R3
+w1559786208
+8Z:/home/thomas/ECE271_Final_Design_Project/PS2_decoder.sv
+FZ:/home/thomas/ECE271_Final_Design_Project/PS2_decoder.sv
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1559786227.000000
+!s107 Z:/home/thomas/ECE271_Final_Design_Project/PS2_decoder.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|Z:/home/thomas/ECE271_Final_Design_Project/PS2_decoder.sv|
+!s101 -O0
+!i113 1
+R6
+n@p@s2_decoder
 vPS2_test
 R0
 R7
@@ -232,6 +257,31 @@ R9
 !i113 1
 R6
 n@p@s2_test
+vPS2FSM
+R0
+!s110 1559782914
+!i10b 1
+!s100 lJRnL=1<`[FihV7W?hhA63
+I9[ML8;ZZ0aa6X]WazcUSJ0
+R2
+!s105 PS2FSM_sv_unit
+S1
+R3
+w1559780129
+8Z:/home/thomas/ECE271_Final_Design_Project/PS2FSM.sv
+FZ:/home/thomas/ECE271_Final_Design_Project/PS2FSM.sv
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1559782914.000000
+!s107 Z:/home/thomas/ECE271_Final_Design_Project/PS2FSM.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|Z:/home/thomas/ECE271_Final_Design_Project/PS2FSM.sv|
+!s101 -O0
+!i113 1
+R6
+n@p@s2@f@s@m
 vregister
 R0
 R12
