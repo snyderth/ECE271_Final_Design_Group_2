@@ -22,7 +22,8 @@ add wave -divider "Decoded Signals"         A_break A_make \
                                             S_break S_make \
                                             Q_break Q_make \
                                             T_break T_make \
-                                            W_break W_make
+                                            W_break W_make \
+                                            G_break G_make
 
 
 force clk 0 @ 0, 1 @ 1 -r 2
