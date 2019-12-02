@@ -53,11 +53,11 @@ module PS2FSM (input logic clk, key_clock, reset, data,
 			nextstate <= getkey1;
 			counter <= 0;
 		end
-			else if (key_clock)
-						nextstate <= waitread1;
-					else
-						nextstate <= read1;
-						
+		else if (key_clock)
+			nextstate <= waitread1;
+		else
+			nextstate <= read1;
+			
 	// The state when key_clock is high. Data is taken into the shift reg on
 	// 	the falling edge of the key_clock (ie when this state is exited).
 	waitread1: if (key_clock)

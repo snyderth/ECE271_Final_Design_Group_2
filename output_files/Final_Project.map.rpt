@@ -1,5 +1,5 @@
-Analysis & Elaboration report for Final_Project
-Wed Jun  5 20:29:55 2019
+Analysis & Synthesis report for Final_Project
+Wed Nov 27 19:13:21 2019
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -7,20 +7,31 @@ Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Elaboration Summary
-  3. Parallel Compilation
-  4. Parameter Settings for User Entity Instance: NES_driver:inst|shift_register:shift
-  5. Parameter Settings for User Entity Instance: NES_driver:inst|Counter:count
-  6. Parameter Settings for User Entity Instance: NES_driver:inst|Comparator:c
-  7. Parameter Settings for User Entity Instance: NES_driver:inst|register:regist
-  8. Parameter Settings for User Entity Instance: NES_Controller:inst2|shift_register:shifter
-  9. Analysis & Elaboration Settings
- 10. Port Connectivity Checks: "PS2_decoder:decode"
- 11. Port Connectivity Checks: "PS2FSM:ps2keyboard"
- 12. Port Connectivity Checks: "NES_Controller:inst2|shift_register:shifter"
- 13. Port Connectivity Checks: "NES_driver:inst|Comparator:c"
- 14. Port Connectivity Checks: "NES_driver:inst|shift_register:shift"
- 15. Analysis & Elaboration Messages
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |Final_Project|PS2FSM:ps2keyboard|nextstate
+  9. State Machine - |Final_Project|PS2FSM:ps2keyboard|state
+ 10. Registers Removed During Synthesis
+ 11. General Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for User Entity Instance: NES_driver:inst|shift_register:shift
+ 14. Parameter Settings for User Entity Instance: NES_driver:inst|Counter:count
+ 15. Parameter Settings for User Entity Instance: NES_driver:inst|Comparator:c
+ 16. Parameter Settings for User Entity Instance: NES_driver:inst|register:regist
+ 17. Parameter Settings for User Entity Instance: NES_Controller:inst2|shift_register:shifter
+ 18. Port Connectivity Checks: "PS2_decoder:decode"
+ 19. Port Connectivity Checks: "PS2FSM:ps2keyboard"
+ 20. Port Connectivity Checks: "NES_Controller:inst2|shift_register:shifter"
+ 21. Port Connectivity Checks: "NES_driver:inst|Comparator:c"
+ 22. Port Connectivity Checks: "NES_driver:inst|shift_register:shift"
+ 23. Post-Synthesis Netlist Statistics for Top Partition
+ 24. Elapsed Time Per Partition
+ 25. Analysis & Synthesis Messages
+ 26. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -44,95 +55,29 @@ refer to the applicable agreement for further details.
 
 
 +----------------------------------------------------------------------------------+
-; Analysis & Elaboration Summary                                                   ;
+; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status      ; Successful - Wed Jun  5 20:29:55 2019       ;
+; Analysis & Synthesis Status        ; Successful - Wed Nov 27 19:13:21 2019       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; Final_Project                               ;
 ; Top-level Entity Name              ; Final_Project                               ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; N/A until Partition Merge                   ;
-;     Total combinational functions  ; N/A until Partition Merge                   ;
-;     Dedicated logic registers      ; N/A until Partition Merge                   ;
-; Total registers                    ; N/A until Partition Merge                   ;
-; Total pins                         ; N/A until Partition Merge                   ;
-; Total virtual pins                 ; N/A until Partition Merge                   ;
-; Total memory bits                  ; N/A until Partition Merge                   ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
-; Total PLLs                         ; N/A until Partition Merge                   ;
-; UFM blocks                         ; N/A until Partition Merge                   ;
-; ADC blocks                         ; N/A until Partition Merge                   ;
+; Total logic elements               ; 128                                         ;
+;     Total combinational functions  ; 84                                          ;
+;     Dedicated logic registers      ; 77                                          ;
+; Total registers                    ; 77                                          ;
+; Total pins                         ; 40                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
+; UFM blocks                         ; 0                                           ;
+; ADC blocks                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 2           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
-
-
-+-----------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: NES_driver:inst|shift_register:shift ;
-+----------------+-------+----------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                     ;
-+----------------+-------+----------------------------------------------------------+
-; N              ; 8     ; Signed Integer                                           ;
-+----------------+-------+----------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: NES_driver:inst|Counter:count ;
-+----------------+-------+---------------------------------------------------+
-; Parameter Name ; Value ; Type                                              ;
-+----------------+-------+---------------------------------------------------+
-; width          ; 4     ; Signed Integer                                    ;
-+----------------+-------+---------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: NES_driver:inst|Comparator:c ;
-+----------------+-------+--------------------------------------------------+
-; Parameter Name ; Value ; Type                                             ;
-+----------------+-------+--------------------------------------------------+
-; N              ; 4     ; Signed Integer                                   ;
-+----------------+-------+--------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: NES_driver:inst|register:regist ;
-+----------------+-------+-----------------------------------------------------+
-; Parameter Name ; Value ; Type                                                ;
-+----------------+-------+-----------------------------------------------------+
-; N              ; 8     ; Signed Integer                                      ;
-+----------------+-------+-----------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: NES_Controller:inst2|shift_register:shifter ;
-+----------------+-------+-----------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                            ;
-+----------------+-------+-----------------------------------------------------------------+
-; N              ; 8     ; Signed Integer                                                  ;
-+----------------+-------+-----------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
 +------------------------------------------------------------------------------------------------------------+
-; Analysis & Elaboration Settings                                                                            ;
+; Analysis & Synthesis Settings                                                                              ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
@@ -217,14 +162,227 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------------------------------------------------------------+--------------------+--------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "PS2_decoder:decode"                                                                                                                             ;
-+----------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port     ; Type  ; Severity ; Details                                                                                                                                      ;
-+----------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; par_err1 ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-; par_err2 ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+----------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                           ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                 ; Library ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------+---------+
+; Counter.sv                       ; yes             ; User SystemVerilog HDL File        ; /home/thomas/Documents/classes/ECE271_Final_Design_Project/Counter.sv        ;         ;
+; Comparator.sv                    ; yes             ; User SystemVerilog HDL File        ; /home/thomas/Documents/classes/ECE271_Final_Design_Project/Comparator.sv     ;         ;
+; NES_driver.sv                    ; yes             ; User SystemVerilog HDL File        ; /home/thomas/Documents/classes/ECE271_Final_Design_Project/NES_driver.sv     ;         ;
+; Final_Project.sv                 ; yes             ; User SystemVerilog HDL File        ; /home/thomas/Documents/classes/ECE271_Final_Design_Project/Final_Project.sv  ;         ;
+; shift_register.sv                ; yes             ; User SystemVerilog HDL File        ; /home/thomas/Documents/classes/ECE271_Final_Design_Project/shift_register.sv ;         ;
+; Synchronizer.sv                  ; yes             ; User SystemVerilog HDL File        ; /home/thomas/Documents/classes/ECE271_Final_Design_Project/Synchronizer.sv   ;         ;
+; NES_Controller.sv                ; yes             ; User SystemVerilog HDL File        ; /home/thomas/Documents/classes/ECE271_Final_Design_Project/NES_Controller.sv ;         ;
+; PS2_decoder.sv                   ; yes             ; User SystemVerilog HDL File        ; /home/thomas/Documents/classes/ECE271_Final_Design_Project/PS2_decoder.sv    ;         ;
+; register.sv                      ; yes             ; Auto-Found SystemVerilog HDL File  ; /home/thomas/Documents/classes/ECE271_Final_Design_Project/register.sv       ;         ;
+; PS2FSM.sv                        ; yes             ; Auto-Found SystemVerilog HDL File  ; /home/thomas/Documents/classes/ECE271_Final_Design_Project/PS2FSM.sv         ;         ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 128       ;
+;                                             ;           ;
+; Total combinational functions               ; 84        ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 41        ;
+;     -- 3 input functions                    ; 22        ;
+;     -- <=2 input functions                  ; 21        ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 84        ;
+;     -- arithmetic mode                      ; 0         ;
+;                                             ;           ;
+; Total registers                             ; 77        ;
+;     -- Dedicated logic registers            ; 77        ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 40        ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 67        ;
+; Total fan-out                               ; 582       ;
+; Average fan-out                             ; 2.41      ;
++---------------------------------------------+-----------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                              ;
++--------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------------------+----------------+--------------+
+; Compilation Hierarchy Node     ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                        ; Entity Name    ; Library Name ;
++--------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------------------+----------------+--------------+
+; |Final_Project                 ; 84 (0)              ; 77 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 40   ; 0            ; 0          ; |Final_Project                                             ; Final_Project  ; work         ;
+;    |NES_Controller:inst2|      ; 8 (0)               ; 8 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Final_Project|NES_Controller:inst2                        ; NES_Controller ; work         ;
+;       |shift_register:shifter| ; 8 (8)               ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Final_Project|NES_Controller:inst2|shift_register:shifter ; shift_register ; work         ;
+;    |NES_driver:inst|           ; 7 (1)               ; 22 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Final_Project|NES_driver:inst                             ; NES_driver     ; work         ;
+;       |Counter:count|          ; 5 (5)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Final_Project|NES_driver:inst|Counter:count               ; Counter        ; work         ;
+;       |Synchronizer:sync|      ; 1 (1)               ; 2 (2)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Final_Project|NES_driver:inst|Synchronizer:sync           ; Synchronizer   ; work         ;
+;       |register:regist|        ; 0 (0)               ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Final_Project|NES_driver:inst|register:regist             ; register       ; work         ;
+;       |shift_register:shift|   ; 0 (0)               ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Final_Project|NES_driver:inst|shift_register:shift        ; shift_register ; work         ;
+;    |PS2FSM:ps2keyboard|        ; 36 (36)             ; 47 (47)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Final_Project|PS2FSM:ps2keyboard                          ; PS2FSM         ; work         ;
+;    |PS2_decoder:decode|        ; 33 (33)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Final_Project|PS2_decoder:decode                          ; PS2_decoder    ; work         ;
++--------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------------------+----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |Final_Project|PS2FSM:ps2keyboard|nextstate                                                                                                                         ;
++---------------------+---------------------+-------------------+---------------------+-----------------+-------------------+---------------------+-----------------+-----------------+
+; Name                ; nextstate.waitstart ; nextstate.getkey2 ; nextstate.waitread2 ; nextstate.read2 ; nextstate.getkey1 ; nextstate.waitread1 ; nextstate.read1 ; nextstate.start ;
++---------------------+---------------------+-------------------+---------------------+-----------------+-------------------+---------------------+-----------------+-----------------+
+; nextstate.start     ; 0                   ; 0                 ; 0                   ; 0               ; 0                 ; 0                   ; 0               ; 0               ;
+; nextstate.read1     ; 0                   ; 0                 ; 0                   ; 0               ; 0                 ; 0                   ; 1               ; 1               ;
+; nextstate.waitread1 ; 0                   ; 0                 ; 0                   ; 0               ; 0                 ; 1                   ; 0               ; 1               ;
+; nextstate.getkey1   ; 0                   ; 0                 ; 0                   ; 0               ; 1                 ; 0                   ; 0               ; 1               ;
+; nextstate.read2     ; 0                   ; 0                 ; 0                   ; 1               ; 0                 ; 0                   ; 0               ; 1               ;
+; nextstate.waitread2 ; 0                   ; 0                 ; 1                   ; 0               ; 0                 ; 0                   ; 0               ; 1               ;
+; nextstate.getkey2   ; 0                   ; 1                 ; 0                   ; 0               ; 0                 ; 0                   ; 0               ; 1               ;
+; nextstate.waitstart ; 1                   ; 0                 ; 0                   ; 0               ; 0                 ; 0                   ; 0               ; 1               ;
++---------------------+---------------------+-------------------+---------------------+-----------------+-------------------+---------------------+-----------------+-----------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |Final_Project|PS2FSM:ps2keyboard|state                                                                                         ;
++-----------------+-----------------+---------------+-----------------+-------------+---------------+-----------------+-------------+-------------+
+; Name            ; state.waitstart ; state.getkey2 ; state.waitread2 ; state.read2 ; state.getkey1 ; state.waitread1 ; state.read1 ; state.start ;
++-----------------+-----------------+---------------+-----------------+-------------+---------------+-----------------+-------------+-------------+
+; state.start     ; 0               ; 0             ; 0               ; 0           ; 0             ; 0               ; 0           ; 0           ;
+; state.read1     ; 0               ; 0             ; 0               ; 0           ; 0             ; 0               ; 1           ; 1           ;
+; state.waitread1 ; 0               ; 0             ; 0               ; 0           ; 0             ; 1               ; 0           ; 1           ;
+; state.getkey1   ; 0               ; 0             ; 0               ; 0           ; 1             ; 0               ; 0           ; 1           ;
+; state.read2     ; 0               ; 0             ; 0               ; 1           ; 0             ; 0               ; 0           ; 1           ;
+; state.waitread2 ; 0               ; 0             ; 1               ; 0           ; 0             ; 0               ; 0           ; 1           ;
+; state.getkey2   ; 0               ; 1             ; 0               ; 0           ; 0             ; 0               ; 0           ; 1           ;
+; state.waitstart ; 1               ; 0             ; 0               ; 0           ; 0             ; 0               ; 0           ; 1           ;
++-----------------+-----------------+---------------+-----------------+-------------+---------------+-----------------+-------------+-------------+
+
+
++------------------------------------------------------------+
+; Registers Removed During Synthesis                         ;
++---------------------------------------+--------------------+
+; Register name                         ; Reason for Removal ;
++---------------------------------------+--------------------+
+; PS2FSM:ps2keyboard|nextstate~2        ; Lost fanout        ;
+; PS2FSM:ps2keyboard|nextstate~3        ; Lost fanout        ;
+; PS2FSM:ps2keyboard|nextstate~4        ; Lost fanout        ;
+; PS2FSM:ps2keyboard|state~4            ; Lost fanout        ;
+; PS2FSM:ps2keyboard|state~5            ; Lost fanout        ;
+; PS2FSM:ps2keyboard|state~6            ; Lost fanout        ;
+; Total Number of Removed Registers = 6 ;                    ;
++---------------------------------------+--------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 77    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 37    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 54    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
+; 3:1                ; 11 bits   ; 22 LEs        ; 0 LEs                ; 22 LEs                 ; Yes        ; |Final_Project|PS2FSM:ps2keyboard|shift[10]                     ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |Final_Project|NES_Controller:inst2|shift_register:shifter|Q[6] ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 4 LEs                ; 16 LEs                 ; Yes        ; |Final_Project|PS2FSM:ps2keyboard|counter[1]                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: NES_driver:inst|shift_register:shift ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; N              ; 8     ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: NES_driver:inst|Counter:count ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; width          ; 4     ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: NES_driver:inst|Comparator:c ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; N              ; 4     ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: NES_driver:inst|register:regist ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; N              ; 8     ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: NES_Controller:inst2|shift_register:shifter ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; N              ; 8     ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "PS2_decoder:decode"                                                                                                                              ;
++----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                                                                                      ;
++----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; par_err1 ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; par_err2 ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; G_make   ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; G_break  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
++----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------+
@@ -275,63 +433,283 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+---------------------------------+
-; Analysis & Elaboration Messages ;
-+---------------------------------+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 40                          ;
+; cycloneiii_ff         ; 77                          ;
+;     CLR               ; 12                          ;
+;     ENA               ; 29                          ;
+;     ENA CLR           ; 25                          ;
+;     plain             ; 11                          ;
+; cycloneiii_lcell_comb ; 84                          ;
+;     normal            ; 84                          ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 20                          ;
+;         3 data inputs ; 22                          ;
+;         4 data inputs ; 41                          ;
+;                       ;                             ;
+; Max LUT depth         ; 4.00                        ;
+; Average LUT depth     ; 1.93                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Elaboration
+Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Wed Jun  5 20:29:33 2019
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Final_Project -c Final_Project --analysis_and_elaboration
+    Info: Processing started: Wed Nov 27 19:13:00 2019
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Final_Project -c Final_Project
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Warning (10090): Verilog HDL syntax warning at Counter.sv(2): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Counter.sv Line: 2
+Warning (10090): Verilog HDL syntax warning at Counter.sv(3): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Counter.sv Line: 3
+Warning (10090): Verilog HDL syntax warning at Counter.sv(4): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Counter.sv Line: 4
+Warning (10090): Verilog HDL syntax warning at Counter.sv(5): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Counter.sv Line: 5
+Warning (10090): Verilog HDL syntax warning at Counter.sv(6): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Counter.sv Line: 6
+Warning (10090): Verilog HDL syntax warning at Counter.sv(7): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Counter.sv Line: 7
+Warning (10090): Verilog HDL syntax warning at Counter.sv(8): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Counter.sv Line: 8
+Warning (10090): Verilog HDL syntax warning at Counter.sv(9): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Counter.sv Line: 9
+Warning (10090): Verilog HDL syntax warning at Counter.sv(10): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Counter.sv Line: 10
+Warning (10090): Verilog HDL syntax warning at Counter.sv(11): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Counter.sv Line: 11
+Warning (10090): Verilog HDL syntax warning at Counter.sv(12): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Counter.sv Line: 12
+Warning (10090): Verilog HDL syntax warning at Counter.sv(13): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Counter.sv Line: 13
+Warning (10090): Verilog HDL syntax warning at Counter.sv(14): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Counter.sv Line: 14
+Warning (10090): Verilog HDL syntax warning at Counter.sv(15): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Counter.sv Line: 15
+Warning (10090): Verilog HDL syntax warning at Counter.sv(16): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Counter.sv Line: 16
+Warning (10090): Verilog HDL syntax warning at Counter.sv(17): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Counter.sv Line: 17
+Warning (10090): Verilog HDL syntax warning at Counter.sv(18): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Counter.sv Line: 18
 Info (12021): Found 1 design units, including 1 entities, in source file Counter.sv
-    Info (12023): Found entity 1: Counter File: /home/thomas/ECE271_Final_Design_Project/Counter.sv Line: 1
+    Info (12023): Found entity 1: Counter File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Counter.sv Line: 19
+Warning (10090): Verilog HDL syntax warning at Comparator.sv(2): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Comparator.sv Line: 2
+Warning (10090): Verilog HDL syntax warning at Comparator.sv(3): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Comparator.sv Line: 3
+Warning (10090): Verilog HDL syntax warning at Comparator.sv(4): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Comparator.sv Line: 4
+Warning (10090): Verilog HDL syntax warning at Comparator.sv(5): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Comparator.sv Line: 5
+Warning (10090): Verilog HDL syntax warning at Comparator.sv(6): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Comparator.sv Line: 6
+Warning (10090): Verilog HDL syntax warning at Comparator.sv(7): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Comparator.sv Line: 7
+Warning (10090): Verilog HDL syntax warning at Comparator.sv(8): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Comparator.sv Line: 8
+Warning (10090): Verilog HDL syntax warning at Comparator.sv(9): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Comparator.sv Line: 9
+Warning (10090): Verilog HDL syntax warning at Comparator.sv(10): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Comparator.sv Line: 10
+Warning (10090): Verilog HDL syntax warning at Comparator.sv(11): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Comparator.sv Line: 11
+Warning (10090): Verilog HDL syntax warning at Comparator.sv(12): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Comparator.sv Line: 12
+Warning (10090): Verilog HDL syntax warning at Comparator.sv(13): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Comparator.sv Line: 13
+Warning (10090): Verilog HDL syntax warning at Comparator.sv(14): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Comparator.sv Line: 14
+Warning (10090): Verilog HDL syntax warning at Comparator.sv(15): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Comparator.sv Line: 15
+Warning (10090): Verilog HDL syntax warning at Comparator.sv(16): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Comparator.sv Line: 16
+Warning (10090): Verilog HDL syntax warning at Comparator.sv(17): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Comparator.sv Line: 17
 Info (12021): Found 1 design units, including 1 entities, in source file Comparator.sv
-    Info (12023): Found entity 1: Comparator File: /home/thomas/ECE271_Final_Design_Project/Comparator.sv Line: 1
+    Info (12023): Found entity 1: Comparator File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Comparator.sv Line: 18
+Warning (10090): Verilog HDL syntax warning at NES_driver.sv(2): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/NES_driver.sv Line: 2
+Warning (10090): Verilog HDL syntax warning at NES_driver.sv(3): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/NES_driver.sv Line: 3
+Warning (10090): Verilog HDL syntax warning at NES_driver.sv(4): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/NES_driver.sv Line: 4
+Warning (10090): Verilog HDL syntax warning at NES_driver.sv(5): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/NES_driver.sv Line: 5
+Warning (10090): Verilog HDL syntax warning at NES_driver.sv(6): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/NES_driver.sv Line: 6
+Warning (10090): Verilog HDL syntax warning at NES_driver.sv(7): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/NES_driver.sv Line: 7
+Warning (10090): Verilog HDL syntax warning at NES_driver.sv(8): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/NES_driver.sv Line: 8
+Warning (10090): Verilog HDL syntax warning at NES_driver.sv(9): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/NES_driver.sv Line: 9
+Warning (10090): Verilog HDL syntax warning at NES_driver.sv(10): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/NES_driver.sv Line: 10
+Warning (10090): Verilog HDL syntax warning at NES_driver.sv(11): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/NES_driver.sv Line: 11
+Warning (10090): Verilog HDL syntax warning at NES_driver.sv(12): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/NES_driver.sv Line: 12
+Warning (10090): Verilog HDL syntax warning at NES_driver.sv(13): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/NES_driver.sv Line: 13
+Warning (10090): Verilog HDL syntax warning at NES_driver.sv(14): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/NES_driver.sv Line: 14
+Warning (10090): Verilog HDL syntax warning at NES_driver.sv(15): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/NES_driver.sv Line: 15
+Warning (10090): Verilog HDL syntax warning at NES_driver.sv(16): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/NES_driver.sv Line: 16
+Warning (10090): Verilog HDL syntax warning at NES_driver.sv(17): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/NES_driver.sv Line: 17
 Info (12021): Found 1 design units, including 1 entities, in source file NES_driver.sv
-    Info (12023): Found entity 1: NES_driver File: /home/thomas/ECE271_Final_Design_Project/NES_driver.sv Line: 1
+    Info (12023): Found entity 1: NES_driver File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/NES_driver.sv Line: 38
+Warning (10090): Verilog HDL syntax warning at Final_Project.sv(2): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Final_Project.sv Line: 2
+Warning (10090): Verilog HDL syntax warning at Final_Project.sv(3): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Final_Project.sv Line: 3
+Warning (10090): Verilog HDL syntax warning at Final_Project.sv(4): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Final_Project.sv Line: 4
+Warning (10090): Verilog HDL syntax warning at Final_Project.sv(5): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Final_Project.sv Line: 5
+Warning (10090): Verilog HDL syntax warning at Final_Project.sv(6): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Final_Project.sv Line: 6
+Warning (10090): Verilog HDL syntax warning at Final_Project.sv(7): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Final_Project.sv Line: 7
+Warning (10090): Verilog HDL syntax warning at Final_Project.sv(8): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Final_Project.sv Line: 8
+Warning (10090): Verilog HDL syntax warning at Final_Project.sv(9): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Final_Project.sv Line: 9
+Warning (10090): Verilog HDL syntax warning at Final_Project.sv(10): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Final_Project.sv Line: 10
+Warning (10090): Verilog HDL syntax warning at Final_Project.sv(11): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Final_Project.sv Line: 11
+Warning (10090): Verilog HDL syntax warning at Final_Project.sv(12): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Final_Project.sv Line: 12
+Warning (10090): Verilog HDL syntax warning at Final_Project.sv(13): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Final_Project.sv Line: 13
+Warning (10090): Verilog HDL syntax warning at Final_Project.sv(14): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Final_Project.sv Line: 14
+Warning (10090): Verilog HDL syntax warning at Final_Project.sv(15): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Final_Project.sv Line: 15
+Warning (10090): Verilog HDL syntax warning at Final_Project.sv(16): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Final_Project.sv Line: 16
+Warning (10090): Verilog HDL syntax warning at Final_Project.sv(17): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Final_Project.sv Line: 17
+Warning (10090): Verilog HDL syntax warning at Final_Project.sv(18): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Final_Project.sv Line: 18
 Info (12021): Found 1 design units, including 1 entities, in source file Final_Project.sv
-    Info (12023): Found entity 1: Final_Project File: /home/thomas/ECE271_Final_Design_Project/Final_Project.sv Line: 1
+    Info (12023): Found entity 1: Final_Project File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Final_Project.sv Line: 19
+Warning (10090): Verilog HDL syntax warning at shift_register.sv(2): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/shift_register.sv Line: 2
+Warning (10090): Verilog HDL syntax warning at shift_register.sv(3): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/shift_register.sv Line: 3
+Warning (10090): Verilog HDL syntax warning at shift_register.sv(4): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/shift_register.sv Line: 4
+Warning (10090): Verilog HDL syntax warning at shift_register.sv(5): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/shift_register.sv Line: 5
+Warning (10090): Verilog HDL syntax warning at shift_register.sv(6): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/shift_register.sv Line: 6
+Warning (10090): Verilog HDL syntax warning at shift_register.sv(7): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/shift_register.sv Line: 7
+Warning (10090): Verilog HDL syntax warning at shift_register.sv(8): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/shift_register.sv Line: 8
+Warning (10090): Verilog HDL syntax warning at shift_register.sv(9): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/shift_register.sv Line: 9
+Warning (10090): Verilog HDL syntax warning at shift_register.sv(10): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/shift_register.sv Line: 10
+Warning (10090): Verilog HDL syntax warning at shift_register.sv(11): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/shift_register.sv Line: 11
+Warning (10090): Verilog HDL syntax warning at shift_register.sv(12): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/shift_register.sv Line: 12
+Warning (10090): Verilog HDL syntax warning at shift_register.sv(13): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/shift_register.sv Line: 13
+Warning (10090): Verilog HDL syntax warning at shift_register.sv(14): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/shift_register.sv Line: 14
+Warning (10090): Verilog HDL syntax warning at shift_register.sv(15): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/shift_register.sv Line: 15
+Warning (10090): Verilog HDL syntax warning at shift_register.sv(16): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/shift_register.sv Line: 16
 Info (12021): Found 1 design units, including 1 entities, in source file shift_register.sv
-    Info (12023): Found entity 1: shift_register File: /home/thomas/ECE271_Final_Design_Project/shift_register.sv Line: 1
+    Info (12023): Found entity 1: shift_register File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/shift_register.sv Line: 17
+Warning (10090): Verilog HDL syntax warning at Synchronizer.sv(2): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Synchronizer.sv Line: 2
+Warning (10090): Verilog HDL syntax warning at Synchronizer.sv(3): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Synchronizer.sv Line: 3
+Warning (10090): Verilog HDL syntax warning at Synchronizer.sv(4): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Synchronizer.sv Line: 4
+Warning (10090): Verilog HDL syntax warning at Synchronizer.sv(5): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Synchronizer.sv Line: 5
+Warning (10090): Verilog HDL syntax warning at Synchronizer.sv(6): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Synchronizer.sv Line: 6
+Warning (10090): Verilog HDL syntax warning at Synchronizer.sv(7): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Synchronizer.sv Line: 7
+Warning (10090): Verilog HDL syntax warning at Synchronizer.sv(8): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Synchronizer.sv Line: 8
+Warning (10090): Verilog HDL syntax warning at Synchronizer.sv(9): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Synchronizer.sv Line: 9
+Warning (10090): Verilog HDL syntax warning at Synchronizer.sv(10): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Synchronizer.sv Line: 10
+Warning (10090): Verilog HDL syntax warning at Synchronizer.sv(11): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Synchronizer.sv Line: 11
+Warning (10090): Verilog HDL syntax warning at Synchronizer.sv(12): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Synchronizer.sv Line: 12
+Warning (10090): Verilog HDL syntax warning at Synchronizer.sv(13): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Synchronizer.sv Line: 13
+Warning (10090): Verilog HDL syntax warning at Synchronizer.sv(14): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Synchronizer.sv Line: 14
+Warning (10090): Verilog HDL syntax warning at Synchronizer.sv(15): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Synchronizer.sv Line: 15
+Warning (10090): Verilog HDL syntax warning at Synchronizer.sv(16): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Synchronizer.sv Line: 16
 Info (12021): Found 1 design units, including 1 entities, in source file Synchronizer.sv
-    Info (12023): Found entity 1: Synchronizer File: /home/thomas/ECE271_Final_Design_Project/Synchronizer.sv Line: 1
+    Info (12023): Found entity 1: Synchronizer File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Synchronizer.sv Line: 17
 Info (12021): Found 1 design units, including 1 entities, in source file PS2_Controller.sv
-    Info (12023): Found entity 1: PS2_Controller File: /home/thomas/ECE271_Final_Design_Project/PS2_Controller.sv Line: 1
+    Info (12023): Found entity 1: PS2_Controller File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/PS2_Controller.sv Line: 1
+Warning (10090): Verilog HDL syntax warning at NES_Controller.sv(2): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/NES_Controller.sv Line: 2
+Warning (10090): Verilog HDL syntax warning at NES_Controller.sv(3): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/NES_Controller.sv Line: 3
+Warning (10090): Verilog HDL syntax warning at NES_Controller.sv(4): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/NES_Controller.sv Line: 4
+Warning (10090): Verilog HDL syntax warning at NES_Controller.sv(5): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/NES_Controller.sv Line: 5
+Warning (10090): Verilog HDL syntax warning at NES_Controller.sv(6): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/NES_Controller.sv Line: 6
+Warning (10090): Verilog HDL syntax warning at NES_Controller.sv(7): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/NES_Controller.sv Line: 7
+Warning (10090): Verilog HDL syntax warning at NES_Controller.sv(8): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/NES_Controller.sv Line: 8
+Warning (10090): Verilog HDL syntax warning at NES_Controller.sv(9): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/NES_Controller.sv Line: 9
+Warning (10090): Verilog HDL syntax warning at NES_Controller.sv(10): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/NES_Controller.sv Line: 10
+Warning (10090): Verilog HDL syntax warning at NES_Controller.sv(11): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/NES_Controller.sv Line: 11
+Warning (10090): Verilog HDL syntax warning at NES_Controller.sv(12): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/NES_Controller.sv Line: 12
+Warning (10090): Verilog HDL syntax warning at NES_Controller.sv(13): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/NES_Controller.sv Line: 13
+Warning (10090): Verilog HDL syntax warning at NES_Controller.sv(14): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/NES_Controller.sv Line: 14
+Warning (10090): Verilog HDL syntax warning at NES_Controller.sv(15): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/NES_Controller.sv Line: 15
+Warning (10090): Verilog HDL syntax warning at NES_Controller.sv(16): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/NES_Controller.sv Line: 16
+Warning (10090): Verilog HDL syntax warning at NES_Controller.sv(17): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/NES_Controller.sv Line: 17
 Info (12021): Found 1 design units, including 1 entities, in source file NES_Controller.sv
-    Info (12023): Found entity 1: NES_Controller File: /home/thomas/ECE271_Final_Design_Project/NES_Controller.sv Line: 1
+    Info (12023): Found entity 1: NES_Controller File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/NES_Controller.sv Line: 39
 Info (12021): Found 1 design units, including 1 entities, in source file PS2_test.sv
-    Info (12023): Found entity 1: PS2_test File: /home/thomas/ECE271_Final_Design_Project/PS2_test.sv Line: 1
+    Info (12023): Found entity 1: PS2_test File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/PS2_test.sv Line: 1
+Warning (10090): Verilog HDL syntax warning at Count_Block.sv(2): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Count_Block.sv Line: 2
+Warning (10090): Verilog HDL syntax warning at Count_Block.sv(3): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Count_Block.sv Line: 3
+Warning (10090): Verilog HDL syntax warning at Count_Block.sv(4): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Count_Block.sv Line: 4
+Warning (10090): Verilog HDL syntax warning at Count_Block.sv(5): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Count_Block.sv Line: 5
+Warning (10090): Verilog HDL syntax warning at Count_Block.sv(6): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Count_Block.sv Line: 6
+Warning (10090): Verilog HDL syntax warning at Count_Block.sv(7): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Count_Block.sv Line: 7
+Warning (10090): Verilog HDL syntax warning at Count_Block.sv(8): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Count_Block.sv Line: 8
+Warning (10090): Verilog HDL syntax warning at Count_Block.sv(9): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Count_Block.sv Line: 9
+Warning (10090): Verilog HDL syntax warning at Count_Block.sv(10): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Count_Block.sv Line: 10
+Warning (10090): Verilog HDL syntax warning at Count_Block.sv(11): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Count_Block.sv Line: 11
+Warning (10090): Verilog HDL syntax warning at Count_Block.sv(12): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Count_Block.sv Line: 12
+Warning (10090): Verilog HDL syntax warning at Count_Block.sv(13): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Count_Block.sv Line: 13
+Warning (10090): Verilog HDL syntax warning at Count_Block.sv(14): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Count_Block.sv Line: 14
+Warning (10090): Verilog HDL syntax warning at Count_Block.sv(15): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Count_Block.sv Line: 15
+Warning (10090): Verilog HDL syntax warning at Count_Block.sv(16): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Count_Block.sv Line: 16
+Warning (10090): Verilog HDL syntax warning at Count_Block.sv(17): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Count_Block.sv Line: 17
 Info (12021): Found 1 design units, including 1 entities, in source file Count_Block.sv
-    Info (12023): Found entity 1: Count_Block File: /home/thomas/ECE271_Final_Design_Project/Count_Block.sv Line: 1
+    Info (12023): Found entity 1: Count_Block File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Count_Block.sv Line: 18
 Info (12021): Found 1 design units, including 1 entities, in source file counter_test.sv
-    Info (12023): Found entity 1: counter_test File: /home/thomas/ECE271_Final_Design_Project/counter_test.sv Line: 1
+    Info (12023): Found entity 1: counter_test File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/counter_test.sv Line: 1
+Warning (10090): Verilog HDL syntax warning at PS2_decoder.sv(2): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/PS2_decoder.sv Line: 2
+Warning (10090): Verilog HDL syntax warning at PS2_decoder.sv(3): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/PS2_decoder.sv Line: 3
+Warning (10090): Verilog HDL syntax warning at PS2_decoder.sv(4): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/PS2_decoder.sv Line: 4
+Warning (10090): Verilog HDL syntax warning at PS2_decoder.sv(5): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/PS2_decoder.sv Line: 5
+Warning (10090): Verilog HDL syntax warning at PS2_decoder.sv(6): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/PS2_decoder.sv Line: 6
+Warning (10090): Verilog HDL syntax warning at PS2_decoder.sv(7): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/PS2_decoder.sv Line: 7
+Warning (10090): Verilog HDL syntax warning at PS2_decoder.sv(8): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/PS2_decoder.sv Line: 8
+Warning (10090): Verilog HDL syntax warning at PS2_decoder.sv(9): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/PS2_decoder.sv Line: 9
+Warning (10090): Verilog HDL syntax warning at PS2_decoder.sv(10): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/PS2_decoder.sv Line: 10
+Warning (10090): Verilog HDL syntax warning at PS2_decoder.sv(11): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/PS2_decoder.sv Line: 11
+Warning (10090): Verilog HDL syntax warning at PS2_decoder.sv(12): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/PS2_decoder.sv Line: 12
+Warning (10090): Verilog HDL syntax warning at PS2_decoder.sv(13): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/PS2_decoder.sv Line: 13
+Warning (10090): Verilog HDL syntax warning at PS2_decoder.sv(14): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/PS2_decoder.sv Line: 14
+Warning (10090): Verilog HDL syntax warning at PS2_decoder.sv(15): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/PS2_decoder.sv Line: 15
+Warning (10090): Verilog HDL syntax warning at PS2_decoder.sv(16): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/PS2_decoder.sv Line: 16
+Warning (10090): Verilog HDL syntax warning at PS2_decoder.sv(17): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/PS2_decoder.sv Line: 17
 Info (12021): Found 1 design units, including 1 entities, in source file PS2_decoder.sv
-    Info (12023): Found entity 1: PS2_decoder File: /home/thomas/ECE271_Final_Design_Project/PS2_decoder.sv Line: 1
+    Info (12023): Found entity 1: PS2_decoder File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/PS2_decoder.sv Line: 20
 Info (12127): Elaborating entity "Final_Project" for the top level hierarchy
-Info (12128): Elaborating entity "NES_driver" for hierarchy "NES_driver:inst" File: /home/thomas/ECE271_Final_Design_Project/Final_Project.sv Line: 46
-Info (12128): Elaborating entity "shift_register" for hierarchy "NES_driver:inst|shift_register:shift" File: /home/thomas/ECE271_Final_Design_Project/NES_driver.sv Line: 46
-Info (12128): Elaborating entity "Counter" for hierarchy "NES_driver:inst|Counter:count" File: /home/thomas/ECE271_Final_Design_Project/NES_driver.sv Line: 52
-Warning (10230): Verilog HDL assignment warning at Counter.sv(9): truncated value with size 32 to match size of target (4) File: /home/thomas/ECE271_Final_Design_Project/Counter.sv Line: 9
-Info (12128): Elaborating entity "Comparator" for hierarchy "NES_driver:inst|Comparator:c" File: /home/thomas/ECE271_Final_Design_Project/NES_driver.sv Line: 56
+Info (12128): Elaborating entity "NES_driver" for hierarchy "NES_driver:inst" File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Final_Project.sv Line: 85
+Info (12128): Elaborating entity "shift_register" for hierarchy "NES_driver:inst|shift_register:shift" File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/NES_driver.sv Line: 64
+Info (12128): Elaborating entity "Counter" for hierarchy "NES_driver:inst|Counter:count" File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/NES_driver.sv Line: 71
+Warning (10230): Verilog HDL assignment warning at Counter.sv(27): truncated value with size 32 to match size of target (4) File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Counter.sv Line: 27
+Info (12128): Elaborating entity "Comparator" for hierarchy "NES_driver:inst|Comparator:c" File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/NES_driver.sv Line: 76
+Warning (10090): Verilog HDL syntax warning at register.sv(2): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/register.sv Line: 2
+Warning (10090): Verilog HDL syntax warning at register.sv(3): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/register.sv Line: 3
+Warning (10090): Verilog HDL syntax warning at register.sv(4): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/register.sv Line: 4
+Warning (10090): Verilog HDL syntax warning at register.sv(5): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/register.sv Line: 5
+Warning (10090): Verilog HDL syntax warning at register.sv(6): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/register.sv Line: 6
+Warning (10090): Verilog HDL syntax warning at register.sv(7): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/register.sv Line: 7
+Warning (10090): Verilog HDL syntax warning at register.sv(8): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/register.sv Line: 8
+Warning (10090): Verilog HDL syntax warning at register.sv(9): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/register.sv Line: 9
+Warning (10090): Verilog HDL syntax warning at register.sv(10): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/register.sv Line: 10
+Warning (10090): Verilog HDL syntax warning at register.sv(11): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/register.sv Line: 11
+Warning (10090): Verilog HDL syntax warning at register.sv(12): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/register.sv Line: 12
+Warning (10090): Verilog HDL syntax warning at register.sv(13): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/register.sv Line: 13
+Warning (10090): Verilog HDL syntax warning at register.sv(14): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/register.sv Line: 14
+Warning (10090): Verilog HDL syntax warning at register.sv(15): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/register.sv Line: 15
 Warning (12125): Using design file register.sv, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: register File: /home/thomas/ECE271_Final_Design_Project/register.sv Line: 1
-Info (12128): Elaborating entity "register" for hierarchy "NES_driver:inst|register:regist" File: /home/thomas/ECE271_Final_Design_Project/NES_driver.sv Line: 62
-Info (12128): Elaborating entity "Synchronizer" for hierarchy "NES_driver:inst|Synchronizer:sync" File: /home/thomas/ECE271_Final_Design_Project/NES_driver.sv Line: 68
-Info (12128): Elaborating entity "NES_Controller" for hierarchy "NES_Controller:inst2" File: /home/thomas/ECE271_Final_Design_Project/Final_Project.sv Line: 75
+    Info (12023): Found entity 1: register File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/register.sv Line: 16
+Info (12128): Elaborating entity "register" for hierarchy "NES_driver:inst|register:regist" File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/NES_driver.sv Line: 83
+Info (12128): Elaborating entity "Synchronizer" for hierarchy "NES_driver:inst|Synchronizer:sync" File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/NES_driver.sv Line: 90
+Info (12128): Elaborating entity "NES_Controller" for hierarchy "NES_Controller:inst2" File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Final_Project.sv Line: 108
+Warning (10090): Verilog HDL syntax warning at PS2FSM.sv(2): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/PS2FSM.sv Line: 2
+Warning (10090): Verilog HDL syntax warning at PS2FSM.sv(3): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/PS2FSM.sv Line: 3
+Warning (10090): Verilog HDL syntax warning at PS2FSM.sv(4): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/PS2FSM.sv Line: 4
+Warning (10090): Verilog HDL syntax warning at PS2FSM.sv(5): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/PS2FSM.sv Line: 5
+Warning (10090): Verilog HDL syntax warning at PS2FSM.sv(6): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/PS2FSM.sv Line: 6
+Warning (10090): Verilog HDL syntax warning at PS2FSM.sv(7): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/PS2FSM.sv Line: 7
+Warning (10090): Verilog HDL syntax warning at PS2FSM.sv(8): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/PS2FSM.sv Line: 8
+Warning (10090): Verilog HDL syntax warning at PS2FSM.sv(9): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/PS2FSM.sv Line: 9
+Warning (10090): Verilog HDL syntax warning at PS2FSM.sv(10): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/PS2FSM.sv Line: 10
+Warning (10090): Verilog HDL syntax warning at PS2FSM.sv(11): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/PS2FSM.sv Line: 11
+Warning (10090): Verilog HDL syntax warning at PS2FSM.sv(12): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/PS2FSM.sv Line: 12
+Warning (10090): Verilog HDL syntax warning at PS2FSM.sv(13): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/PS2FSM.sv Line: 13
+Warning (10090): Verilog HDL syntax warning at PS2FSM.sv(14): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/PS2FSM.sv Line: 14
+Warning (10090): Verilog HDL syntax warning at PS2FSM.sv(15): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/PS2FSM.sv Line: 15
+Warning (10090): Verilog HDL syntax warning at PS2FSM.sv(16): extra block comment delimiter characters /* within block comment File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/PS2FSM.sv Line: 16
 Warning (12125): Using design file PS2FSM.sv, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: PS2FSM File: /home/thomas/ECE271_Final_Design_Project/PS2FSM.sv Line: 1
-Info (12128): Elaborating entity "PS2FSM" for hierarchy "PS2FSM:ps2keyboard" File: /home/thomas/ECE271_Final_Design_Project/Final_Project.sv Line: 88
-Warning (10230): Verilog HDL assignment warning at PS2FSM.sv(30): truncated value with size 32 to match size of target (4) File: /home/thomas/ECE271_Final_Design_Project/PS2FSM.sv Line: 30
-Warning (10230): Verilog HDL assignment warning at PS2FSM.sv(49): truncated value with size 32 to match size of target (4) File: /home/thomas/ECE271_Final_Design_Project/PS2FSM.sv Line: 49
-Warning (10230): Verilog HDL assignment warning at PS2FSM.sv(77): truncated value with size 32 to match size of target (4) File: /home/thomas/ECE271_Final_Design_Project/PS2FSM.sv Line: 77
-Info (12128): Elaborating entity "PS2_decoder" for hierarchy "PS2_decoder:decode" File: /home/thomas/ECE271_Final_Design_Project/Final_Project.sv Line: 109
+    Info (12023): Found entity 1: PS2FSM File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/PS2FSM.sv Line: 17
+Info (12128): Elaborating entity "PS2FSM" for hierarchy "PS2FSM:ps2keyboard" File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Final_Project.sv Line: 135
+Warning (10230): Verilog HDL assignment warning at PS2FSM.sv(48): truncated value with size 32 to match size of target (4) File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/PS2FSM.sv Line: 48
+Warning (10230): Verilog HDL assignment warning at PS2FSM.sv(67): truncated value with size 32 to match size of target (4) File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/PS2FSM.sv Line: 67
+Warning (10230): Verilog HDL assignment warning at PS2FSM.sv(95): truncated value with size 32 to match size of target (4) File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/PS2FSM.sv Line: 95
+Info (12128): Elaborating entity "PS2_decoder" for hierarchy "PS2_decoder:decode" File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/Final_Project.sv Line: 171
 Warning (12241): 5 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 8 warnings
-    Info: Peak virtual memory: 1175 megabytes
-    Info: Processing ended: Wed Jun  5 20:29:55 2019
-    Info: Elapsed time: 00:00:22
-    Info: Total CPU time (on all processors): 00:00:54
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 6 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 168 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 14 input pins
+    Info (21059): Implemented 26 output pins
+    Info (21061): Implemented 128 logic cells
+Info (144001): Generated suppressed messages file /home/thomas/Documents/classes/ECE271_Final_Design_Project/output_files/Final_Project.map.smsg
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 181 warnings
+    Info: Peak virtual memory: 925 megabytes
+    Info: Processing ended: Wed Nov 27 19:13:21 2019
+    Info: Elapsed time: 00:00:21
+    Info: Total CPU time (on all processors): 00:00:45
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in /home/thomas/Documents/classes/ECE271_Final_Design_Project/output_files/Final_Project.map.smsg.
 
 

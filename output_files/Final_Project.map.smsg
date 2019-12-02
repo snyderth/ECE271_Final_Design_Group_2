@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at PS2FSM.sv(37): always construct contains both blocking and non-blocking assignments File: /home/thomas/Documents/classes/ECE271_Final_Design_Project/PS2FSM.sv Line: 37
