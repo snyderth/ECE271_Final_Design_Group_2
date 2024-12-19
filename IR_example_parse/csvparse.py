@@ -28,6 +28,7 @@ def parse_csv(txt_name):
                     times.append(float(0))
                     values.append(0)
                 shift = float(row[0])
+
                 # shift allows time to start at 0.
                 line += 1
             else:
@@ -56,6 +57,6 @@ if os.path.exists('IR_parsed.txt'):
     os.remove('IR_parsed.txt')
 with open('IR_parsed.txt', "w") as out:
     for num in range(10):
-        out.write(str(num) + " data: " + parse_csv(num) + '\n\n')
+        out.write(str(num) + " data: " + parse_csv(num) + '\n')
 
 print "Wrote to 'IR_parsed.txt.'\n"

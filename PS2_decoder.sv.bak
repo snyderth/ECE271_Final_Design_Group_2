@@ -1,0 +1,70 @@
+module PS2_decoder(input [7:0] key1, key2,
+						output W_make, W_break,
+								 D_make, D_break,
+								 A_make, A_break,
+								 T_make, T_break,
+								 E_make, E_break,
+								 F_make, F_break,
+								 R_make, R_break,
+								 S_make, S_break,
+								 Q_make, Q_break);
+				
+				assign A_break = (key2 == 8'h1C);
+				assign D_break = (key2 == 8'h23);
+				assign E_break = (key2 == 8'h24);
+				assign F_break = (key2 == 8'h2B);
+				assign R_break = (key2 == 8'h2D);
+				assign S_break = (key2 == 8'h1B);
+				assign Q_break = (key2 == 8'h15);
+				assign T_break = (key2 == 8'h2C);
+				assign W_break = (key2 == 8'h1D);
+				
+				
+								 
+				always_comb begin
+					if(key1 == 8'hf0)
+					case(key2)
+						8'h1C: A_break = 1;
+						8'h23: D_break = 1;
+						8'h24: E_break = 1;
+						8'h2B: F_break = 1;
+						8'h2D: R_break = 1;
+						8'h1B: S_break = 1;
+						8'h15: Q_break = 1;
+						8'h2C: T_break = 1;
+						8'h1D: W_break = 1;
+						default: W_break = 0; 
+									D_break = 0;
+				               A_break = 0;
+									T_break = 0;
+                           E_break = 0;
+                           F_break = 0;
+                           R_break = 0;
+                           S_break = 0;
+									Q_break = 0;
+									
+					endcase
+					else
+					case(key1)
+						8'h1C: A_make = 1;
+					   8'h23: D_make = 1;
+					   8'h24: E_make = 1;
+					   8'h2B: F_make = 1;
+					   8'h2D: R_make = 1;
+					   8'h1B: S_make = 1;
+					   8'h15: Q_make = 1;
+					   8'h2C: T_make = 1;
+					   8'h1D: W_make = 1;
+					   default: W_make = 0;
+					   			D_make = 0;
+					            A_make = 0;
+									T_make = 0;
+									E_make = 0;
+									F_make = 0;
+                           R_make = 0;
+                           S_make = 0;
+                  			Q_make = 0;
+					endcase
+				end
+				
+endmodule
